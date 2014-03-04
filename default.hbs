@@ -12,9 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
-    <link rel="stylesheet" type="text/css" href="{{asset "assets/css/style.css"}}" />
     <link rel="stylesheet" href="{{asset "assets/css/font-awesome.min.css"}}">
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "assets/css/style.css"}}" />
     <script type="text/javascript" src="//use.typekit.net/fyy7dov.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -26,14 +26,14 @@
         <div class="container">
 
             <ul class="menu">
-                <li> <a href="#"><span class="fa fa-twitter"></span></a></li>
-                <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                <li><a href="#"><span class="fa fa-github-alt"></span></a></li>
-                <li><a href="#"><span class="fa fa-info"></span></a></li>
+                <li> <a href="https://twitter.com/erikssonandreas"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="http://se.linkedin.com/pub/andreas-eriksson/9/37a/223/"><span class="fa fa-linkedin"></span></a></li>
+                <li><a href="https://github.com/andene"><span class="fa fa-github-alt"></span></a></li>
+                <li><a href="/information/"><span class="fa fa-info"></span></a></li>
 
 </ul>
 
-            <h1 class="blog-title">{{@blog.title}}</h1>
+            <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a</h1>
         </div>
 </header>
 
@@ -42,14 +42,18 @@
     </div>
 
 
-    <footer class="site-footer container">
-        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
-        <div class="inner">
-             <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
-             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
-        </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+            <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+            <div class="inner">
+                 <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
+                 <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+             </div>
+         </div>
     </footer>
 
+</div>
     {{ghost_foot}}
     <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>

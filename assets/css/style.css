@@ -1,44 +1,122 @@
+html {
+  font-weight: 300;
+  font-size: 100%; }
+
 body {
-  background-color: #000;
-  font-family: "museo", "ff-dagny-web-pro", arial !important;
-}
+  font-family: "museo","ff-dagny-web-pro", arial;
+  font-size: inherit; }
+
+p {
+  margin: 0 0 1.25em 0; }
+
+blockquote {
+  font-size: 1.25em;
+  border-left: 0.3125em solid #2abb9b; }
+
+a {
+  color: #01b0d1; }
+
+a:hover {
+  text-decoration: none; }
+
+pre {
+  font-size: 1.125em; }
+
+code {
+  color: #e74c3c; }
+
 .header {
-  border-top: 1.25em solid #22a7f0;
-  padding: 1.5625em 0 0 0;
-}
-.header .blog-title {
-  font-size: 3.375em;
-  font-weight: 900;
-  margin: 0.0625em 0 0 0;
-  padding: 0;
-  color: #2C3E50;
-  font-family: "museo", "ff-dagny-web-pro", "arial";
-}
-.header .menu {
-  padding: 0;
-  margin: 0;
-  float: right;
-  list-style: none;
-  font-weight: 200;
-  font-size: 2.375em;
-}
-.header .menu li {
-  float: left;
-  margin-left: 0.625em;
-}
-.header .menu li a {
-  display: inline-block;
-  width: 1.875em;
-  height: 1.875em;
-  background-color: #e87e04;
-  color: #fff;
-  text-align: center;
-  border-radius: 0.9375em;
-  padding-top: 0.25em;
-}
+  border-top: 1.25em solid #e74c3c;
+  padding: 2.8125em 0 0 0; }
+  .header .blog-title {
+    font-size: 3.375em;
+    font-weight: 900;
+    margin: 0.1875em 0 0 0;
+    padding: 0;
+    color: #2abb9b;
+    font-family: "museo","ff-dagny-web-pro", "arial"; }
+    .header .blog-title a {
+      color: #2abb9b; }
+  .header .menu {
+    padding: 0;
+    margin: 0;
+    float: right;
+    list-style: none;
+    font-weight: 200;
+    font-size: 2em; }
+    .header .menu li {
+      float: left;
+      margin-left: 0.625em; }
+      .header .menu li a {
+        display: block;
+        width: 1.875em;
+        height: 1.875em;
+        background-color: #2abb9b;
+        color: #fff;
+        text-align: center;
+        border-radius: 1.875em;
+        padding-top: 0.25em; }
+
 .content {
-  margin: 2.1875em 0;
-}
+  margin: 5.3125em 0 0 0; }
+
+.tag, article .post-meta .date, article .tags {
+  padding: 0.0625em 0.3125em;
+  display: inline-block;
+  color: #fff; }
+
 article {
-  font-size: 1.375em;
-}
+  color: #415457;
+  position: relative;
+  margin: 0 0 3.125em 0; }
+  article .post-meta .date {
+    margin-top: 0.125em;
+    background-color: #e74c3c; }
+  article h2.post-title {
+    margin: 0 0 0 0 !important;
+    font-size: 3em;
+    letter-spacing: -0.0625em; }
+    article h2.post-title a {
+      color: #2abb9b; }
+  article section img {
+    border: 0.0625em solid #415457;
+    max-width: 110%; }
+  article .tags {
+    background-color: #2abb9b; }
+  article .post h2, article .post h3 {
+    margin: 1.875em 0 1.25em 0; }
+  article .post li {
+    font-size: 1.375em; }
+  article .post li li {
+    font-size: 100%; }
+  article .post p {
+    font-size: 1.375em; }
+  article .author {
+    font-size: 1.375em;
+    font-weight: 200;
+    color: #999;
+    margin: 1.25em 0; }
+    article .author img {
+      border-radius: 6.25em;
+      max-width: 1.75em;
+      max-height: 1.75em; }
+
+.site-footer {
+  background-color: #2abb9b;
+  padding: 1.875em 0;
+  color: #fff; }
+  .site-footer a {
+    color: #176856; }
+
+.share {
+  text-align: right; }
+  .share a {
+    border: 2px solid red;
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 0.9375em;
+    font-size: 1.75em;
+    text-align: center; }
