@@ -1,0 +1,204 @@
+// Mixins
+
+@function calculateEm($sizeValue, $context: 16) {
+  @return ($sizeValue / $context) *1em;
+}
+
+@mixin font-size($size: 1.6) {
+  font-size: $size+em;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding: $top*10+px $right*10+px $bottom*10+px $left*10+px;
+    padding: calculateRem($top) calculateRem($right) calculateRem($bottom) calculateRem($left);
+}
+
+$defaultFontSize: 22;
+
+$themeColor: #E74C3C;
+$headerColor: #C5EFF7;
+$turqouise: #2ABB9B;
+$red: #E74C3C;
+$link: #01B0D1;
+$footerLink: darken($turqouise, 20%);
+
+
+html {
+    font-weight:300;
+    font-size: 100%;
+}
+body {
+    font-family:"museo","ff-dagny-web-pro", arial;
+    font-size:inherit;
+}
+
+p {
+    margin: 0 0 calculateEm(20) 0;
+}
+blockquote {
+    font-size: calculateEm(20);
+    border-left: calculateEm(5) solid $turqouise;
+}
+a {
+    color: $link;
+}
+a:hover {
+    text-decoration:none;
+}
+pre {
+    font-size: calculateEm(18);
+}
+code {
+    color: $red;
+
+}
+
+
+.header {
+    border-top: calculateEm(20) solid $red;
+    padding: calculateEm(45) 0 0 0 ;
+
+    .blog-title {
+        font-size: calculateEm(54);
+
+        font-weight:900;
+        margin: calculateEm(3) 0 0 0;
+        padding:0;
+        color: $turqouise;
+        font-family: "museo","ff-dagny-web-pro", "arial";
+
+        a {
+            color: $turqouise;
+        }
+
+    }
+
+    .menu {
+        padding:0;
+        margin:0;
+        float: right;
+        list-style:none;
+        font-weight: 200;
+        font-size: calculateEm(32);
+
+
+        li {
+            float: left;
+            margin-left: calculateEm(10);
+
+            a {
+                display: block;
+                width: calculateEm(30);
+                height: calculateEm(30);
+                background-color: $turqouise;
+                color: #fff;
+                text-align:center;
+                border-radius: calculateEm(30);
+                padding-top: calculateEm(4);
+            }
+        }
+    }
+}
+
+.content {
+    margin: calculateEm(85) 0 0 0;
+
+}
+
+.tag {
+    padding: calculateEm(1) calculateEm(5);
+    display:inline-block;
+    color: #fff;
+}
+
+article {
+    color: #415457;
+    position:relative;
+    margin: 0 0 calculateEm(50) 0;
+
+    .post-meta {
+        .date {
+            margin-top: calculateEm(2);
+            background-color: $red;
+            @extend .tag;
+        }
+    }
+
+    h2.post-title {
+        margin: 0 0 0 0 !important;
+        font-size: calculateEm(48);
+        letter-spacing: calculateEm(-1);
+        a {
+            color: $turqouise;
+        }
+    }
+
+    section {
+        img {
+            border: calculateEm(1) solid #415457;
+            max-width: 110%;
+        }
+    }
+
+    .tags {
+        @extend .tag;
+        background-color: $turqouise;
+    }
+
+    .post {
+
+        h2, h3 {
+            margin: calculateEm(30) 0 calculateEm(20) 0;
+        }
+
+        li {
+            font-size:calculateEm($defaultFontSize);
+        }
+        li li {
+            font-size:100%;
+        }
+
+        p {
+            font-size: calculateEm($defaultFontSize);
+        }
+    }
+    .author {
+        font-size: calculateEm($defaultFontSize);
+        font-weight: 200;
+        color: #999;
+        margin: calculateEm(20) 0;
+
+        img {
+            border-radius: calculateEm(100);
+            max-width: calculateEm(28);
+            max-height: calculateEm(28);
+
+        }
+    }
+}
+.site-footer {
+    background-color: $turqouise;
+
+    padding: calculateEm(30) 0;
+    color: #fff;
+
+    a {
+        color: $footerLink;
+    }
+}
+
+.share {
+    text-align:right;
+
+    a {
+        border: 2px solid red;
+        display: inline-block;
+        background-color: $red;
+        color: #fff;
+        width: calculateEm(20);
+        height: calculateEm(20);
+        border-radius: calculateEm(15);
+        font-size: calculateEm(28);
+        text-align:center;
+    }
+}
