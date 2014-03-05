@@ -8,11 +8,6 @@
   font-size: $size+em;
 }
 
-@mixin padding($top, $right, $bottom, $left) {
-    padding: $top*10+px $right*10+px $bottom*10+px $left*10+px;
-    padding: calculateRem($top) calculateRem($right) calculateRem($bottom) calculateRem($left);
-}
-
 $defaultFontSize: 22;
 
 $themeColor: #E74C3C;
@@ -25,7 +20,7 @@ $footerLink: darken($turqouise, 20%);
 
 html {
     font-weight:300;
-    font-size: 100%;
+    font-size: 82%;
 }
 body {
     font-family:"museo","ff-dagny-web-pro", arial;
@@ -56,13 +51,12 @@ code {
 
 .header {
     border-top: calculateEm(20) solid $red;
-    padding: calculateEm(45) 0 0 0 ;
+    padding: calculateEm(25) 0 0 0 ;
 
     .blog-title {
         font-size: calculateEm(54);
-
         font-weight:900;
-        margin: calculateEm(3) 0 0 0;
+        margin: calculateEm(15) 0 0 0;
         padding:0;
         color: $turqouise;
         font-family: "museo","ff-dagny-web-pro", "arial";
@@ -76,11 +70,10 @@ code {
     .menu {
         padding:0;
         margin:0;
-        float: right;
+        float: none;
         list-style:none;
         font-weight: 200;
-        font-size: calculateEm(32);
-
+        font-size: calculateEm(22);
 
         li {
             float: left;
@@ -96,6 +89,9 @@ code {
                 border-radius: calculateEm(30);
                 padding-top: calculateEm(4);
             }
+        }
+        li:first-child {
+            margin-left: 0;
         }
     }
 }
@@ -202,3 +198,5 @@ article {
         text-align:center;
     }
 }
+
+@import "partials/small";
