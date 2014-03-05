@@ -131,8 +131,9 @@ article {
 
     section {
         img {
-            border: calculateEm(1) solid #415457;
-            max-width: 110%;
+            max-width: 100%;
+            width:100%;
+            height:auto;
         }
     }
 
