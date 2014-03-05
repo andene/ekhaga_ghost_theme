@@ -1,0 +1,78 @@
+// Mixins
+
+.em(@target, @context:16) {
+    font-size: (@target / @context) * 1em;
+}
+
+.rem(@sizeValue:1.6) {
+    @remValue: @sizeValue;
+    @pxValue: (@sizeValue * 10);
+    font-size: ~"@{pxValue}px";
+    font-size: ~"@{remValue}rem";
+}
+
+@themeColor: #E74C3C;
+@headerColor: #C5EFF7;
+@turqouise: #2ABB9B;
+@red: #E74C3C;
+
+body {
+    background-color:#000;
+    font-family:"museo","ff-dagny-web-pro", arial !important;
+
+}
+
+
+.header {
+    border-top: (20 / 16)*1em solid @red;
+    padding:(25 / 16)*1em 0 0 0;
+
+    .blog-title {
+        .rem(5.4);
+        font-weight:900;
+        margin:(1 / 16)*1em 0 0 0;
+        padding:0;
+        color: @turqouise;
+        font-family: "museo","ff-dagny-web-pro", "arial";
+
+    }
+
+    .menu {
+        padding:0;
+        margin:0;
+        float: right;
+        list-style:none;
+        font-weight: 200;
+        .rem(3.8);
+
+
+        li {
+            float: left;
+            margin-left: (10 / 16)*1em;
+
+            a {
+                display: inline-block;
+                width: (30 / 16)*1em;
+                height: (30 / 16)*1em;
+                background-color: @turqouise;
+                color: #fff;
+                text-align:center;
+                border-radius: (15 / 16)*1em;
+                padding-top: (4 / 16)*1em
+            }
+        }
+    }
+}
+
+.content {
+    margin: (35 / 16)*1em 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+article {
+    .rem(2.2);
+    color: #565656;
+}

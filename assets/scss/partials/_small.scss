@@ -1,0 +1,76 @@
+$screen-sm: 768px;
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm) {
+
+
+html {
+    font-weight:300;
+    font-size: 100%;
+}
+body {
+    font-family:"museo","ff-dagny-web-pro", arial;
+    font-size:inherit;
+}
+.header {
+    border-top: calculateEm(20) solid $red;
+    padding: calculateEm(45) 0 0 0 ;
+
+    .blog-title {
+        font-size: calculateEm(54);
+
+        font-weight:900;
+        margin: calculateEm(0) 0 0 0;
+        padding:0;
+        color: $turqouise;
+        font-family: "museo","ff-dagny-web-pro", "arial";
+
+        a {
+            color: $turqouise;
+        }
+
+    }
+
+    .menu {
+        padding:0;
+        margin:0;
+        float: right;
+        list-style:none;
+        font-weight: 200;
+        font-size: calculateEm(32);
+
+
+        li {
+            float: left;
+            margin-left: calculateEm(10);
+
+            a {
+                display: block;
+                width: calculateEm(30);
+                height: calculateEm(30);
+                background-color: $turqouise;
+                color: #fff;
+                text-align:center;
+                border-radius: calculateEm(30);
+                padding-top: calculateEm(4);
+            }
+        }
+    }
+}
+
+.share {
+    text-align:right;
+
+    a {
+        display: inline-block;
+        background-color: $red;
+        color: #fff;
+        width: calculateEm(20);
+        height: calculateEm(20);
+        border-radius: calculateEm(15);
+        font-size: calculateEm(28);
+        text-align:center;
+        margin-top: calculateEm(3);
+    }
+}
+}
