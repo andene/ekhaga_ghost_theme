@@ -4,9 +4,17 @@
     font-size: (@target / @context) * 1em;
 }
 
-@themeColor: #22A7F0;
+.rem(@sizeValue:1.6) {
+    @remValue: @sizeValue;
+    @pxValue: (@sizeValue * 10);
+    font-size: ~"@{pxValue}px";
+    font-size: ~"@{remValue}rem";
+}
+
+@themeColor: #E74C3C;
 @headerColor: #C5EFF7;
-@red: #E87E04;
+@turqouise: #2ABB9B;
+@red: #E74C3C;
 
 body {
     background-color:#000;
@@ -16,15 +24,15 @@ body {
 
 
 .header {
-    border-top: (20 / 16)*1em solid @themeColor;
+    border-top: (20 / 16)*1em solid @red;
     padding:(25 / 16)*1em 0 0 0;
 
     .blog-title {
-        .em(54);
+        .rem(5.4);
         font-weight:900;
         margin:(1 / 16)*1em 0 0 0;
         padding:0;
-        color: #2C3E50;
+        color: @turqouise;
         font-family: "museo","ff-dagny-web-pro", "arial";
 
     }
@@ -35,7 +43,7 @@ body {
         float: right;
         list-style:none;
         font-weight: 200;
-        .em(38);
+        .rem(3.8);
 
 
         li {
@@ -46,7 +54,7 @@ body {
                 display: inline-block;
                 width: (30 / 16)*1em;
                 height: (30 / 16)*1em;
-                background-color: @red;
+                background-color: @turqouise;
                 color: #fff;
                 text-align:center;
                 border-radius: (15 / 16)*1em;
@@ -58,8 +66,13 @@ body {
 
 .content {
     margin: (35 / 16)*1em 0;
+
+    img {
+        width: 100%;
+    }
 }
 
 article {
-    .em(22);
+    .rem(2.2);
+    color: #565656;
 }
