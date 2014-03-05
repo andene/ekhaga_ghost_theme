@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: "./assets/scss/*",
+            files: "./assets/scss/**/*",
             tasks: ["sass"]
         }
     });
