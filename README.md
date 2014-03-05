@@ -2,4 +2,4 @@
 
 This is my first theme for Ghost blog engine
 
-![Ekhaga Ghost Theme](https://dl.dropboxusercontent.com/u/2455273/andrease.png)
+![Ekhaga Ghost Theme](http://198.199.124.227/images/andrease.png)
