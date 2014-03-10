@@ -20,7 +20,7 @@ $footerLink: darken($turqouise, 20%);
 
 html {
     font-weight:300;
-    font-size: 82%;
+    font-size: 82,5%;
 }
 body {
     font-family:"museo","ff-dagny-web-pro", arial;
@@ -58,7 +58,7 @@ code {
         font-weight:900;
         margin: calculateEm(15) 0 0 0;
         padding:0;
-        color: $turqouise;
+
         font-family: "museo","ff-dagny-web-pro", "arial";
 
         a {
@@ -198,6 +198,22 @@ article {
         font-size: calculateEm(28);
         text-align:center;
     }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @import "partials/small";

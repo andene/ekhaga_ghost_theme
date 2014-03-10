@@ -1,6 +1,6 @@
 html {
   font-weight: 300;
-  font-size: 82%; }
+  font-size: 82,5%; }
 
 body {
   font-family: "museo","ff-dagny-web-pro", arial;
@@ -33,7 +33,6 @@ code {
     font-weight: 900;
     margin: 0.9375em 0 0 0;
     padding: 0;
-    color: #2abb9b;
     font-family: "museo","ff-dagny-web-pro", "arial"; }
     .header .blog-title a {
       color: #2abb9b; }
@@ -124,6 +123,22 @@ article {
     font-size: 1.75em;
     text-align: center; }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   html {
@@ -177,4 +192,20 @@ article {
       border-radius: 0.9375em;
       font-size: 1.75em;
       text-align: center;
-      margin-top: 0.1875em; } }
+      margin-top: 0.1875em; }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden; }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; } }
