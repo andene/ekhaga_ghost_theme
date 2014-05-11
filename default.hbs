@@ -6,21 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>{{meta_title}}</title>
+    <meta name="google-site-verification" content="rU2CnEY3qJNkvrsejtnoRpIYsynGQmFWg7snmKeEzRA" />
     <meta name="description" content="{{meta_description}}" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
-    <link rel="stylesheet" href="{{asset "assets/css/font-awesome.min.css"}}">
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="{{asset "assets/css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "assets/css/style.min.css"}}" />
     <script type="text/javascript" src="//use.typekit.net/fyy7dov.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WVQ2KT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVQ2KT');</script>
+<!-- End Google Tag Manager -->
 
 <header class="header">
         <div class="container">
@@ -55,9 +63,7 @@
 
 </div>
     {{ghost_foot}}
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
+    <script type="text/javascript" src="{{asset "assets/js/output.min.js"}}"></script>
 
 </body>
 </html>
